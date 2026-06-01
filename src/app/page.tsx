@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { CreativeHub } from "@/components/creative-hub";
 import { BrainView } from "@/components/brain-view";
 import { BudgetMeter } from "@/components/budget-meter";
+import { OmniChat } from "@/components/omni-chat";
 import { motion, AnimatePresence } from "framer-motion";
 import { LayoutDashboard, BrainCircuit, Wallet, MessageSquare, Terminal } from "lucide-react";
 
@@ -62,11 +63,7 @@ export default function DashboardPage() {
               {activeTab === "dashboard" && <CreativeHub />}
               {activeTab === "brain" && <BrainView />}
               {activeTab === "budget" && <BudgetMeter />}
-              {activeTab === "chat" && (
-                <div className="flex items-center justify-center h-full bg-[#0d0d0f] border border-white/5 rounded-3xl">
-                   <h2 className="font-serif italic text-white/20 text-4xl">Omni-Chat Initializing...</h2>
-                </div>
-              )}
+              {activeTab === "chat" && <OmniChat />}
             </motion.div>
           </AnimatePresence>
         </div>
